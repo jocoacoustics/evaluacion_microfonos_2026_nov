@@ -1,0 +1,180 @@
+:root{--ink:#171717;--muted:#67665f;--line:#d9d7cf;--line-strong:#77763a;--accent:#65641e;--accent2:#858343;--paper:#fff;--article:900px;--text:100%;--sidebar:252px;--gap:64px;--header-h:78px}*{box-sizing:border-box}html,body{height:100%}body{margin:0;color:var(--ink);background:var(--paper);font-family:Georgia,"Times New Roman",serif;line-height:1.58;overflow:hidden}a{color:inherit}.site-header{height:var(--header-h);border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-family:Arial,Helvetica,sans-serif;background:#fff;position:relative;z-index:20}.site-header-inner{height:100%;max-width:1516px;margin:0 auto;padding:0 56px;display:flex;align-items:center;justify-content:space-between;gap:28px}.identity{white-space:nowrap;font-size:14px}.identity em{font-family:Georgia,"Times New Roman",serif;font-size:18px;font-weight:700}.identity .dot{color:#999;padding:0 5px}.identity .date{color:var(--muted);font-size:12px}.topnav{display:flex;align-items:center;gap:6px;font-size:13px}.topnav>a,.topnav>.menu>button{border:0;background:transparent;text-decoration:none;color:#353530;padding:10px 11px;cursor:pointer;border-bottom:2px solid transparent}.topnav>a:hover,.topnav>.menu>button:hover,.topnav>a.active{border-bottom-color:var(--accent)}.topnav a.external::after{content:"↗";font-size:10px;margin-left:4px;color:#777}.menu{position:relative}.menu-panel{display:none;position:absolute;top:42px;right:0;min-width:210px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.06);padding:7px}.menu:hover .menu-panel,.menu:focus-within .menu-panel{display:block}.menu-panel a{display:block;padding:8px 10px;text-decoration:none;font-size:12px;color:#333}.menu-panel a:hover{background:#f5f5f0}.workspace{height:calc(100vh - var(--header-h));display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,var(--sidebar));column-gap:var(--gap);width:min(1240px,calc(100% - 56px));margin:0 auto}.scrollpane{min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;-ms-overflow-style:none}.scrollpane::-webkit-scrollbar{width:0;height:0}.article-pane{padding:52px 0 110px}.sidebar-pane{padding:40px 0 80px 24px;border-left:1px solid var(--line);font-family:Arial,Helvetica,sans-serif}.context-scrollbar{position:fixed;right:12px;top:calc(var(--header-h) + 10px);width:7px;height:calc(100vh - var(--header-h) - 20px);opacity:0;transition:opacity .16s ease;z-index:40;pointer-events:none}.context-scrollbar.visible{opacity:1}.context-scrollbar .track{position:absolute;inset:0;border-radius:10px;background:rgba(0,0,0,.045)}.context-scrollbar .thumb{position:absolute;left:0;width:100%;min-height:34px;border-radius:10px;background:rgba(101,100,30,.68)}.article{width:100%;min-width:0}.report-kicker{font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}h1{margin:0;max-width:850px;font-size:clamp(44px,5vw,67px);line-height:1.02;letter-spacing:-.035em;font-weight:500}.subtitle{max-width:800px;margin:16px 0 24px;color:#363632;font-size:22px;line-height:1.38}.byline{margin:28px 0 48px;padding:13px 0 14px;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end;font-family:Arial,Helvetica,sans-serif}.author{font-weight:700;font-size:15px}.affiliation,.meta{color:var(--muted);font-size:12px;line-height:1.45}.meta{text-align:right}.section{margin-bottom:68px;scroll-margin-top:28px}.section h2{font-size:31px;line-height:1.12;margin:0 0 16px;padding-top:3px;border-top:none;color:#2f2f16;font-weight:500;letter-spacing:-.02em}.section>.section-title{border-top:1px solid var(--line-strong)}.section h3{font-size:21px;margin:31px 0 10px}.section>p,.section>ul,.section>ol,.section>blockquote,.section>div:not(.figure):not(.table-block){max-width:var(--text)}.section p{font-size:17px;margin:0 0 15px;text-align:justify;text-justify:inter-word;hyphens:auto}.section blockquote{margin:24px 0;padding:15px 0 15px 22px;border-left:3px solid var(--accent);font-size:20px;line-height:1.45}.equation{max-width:var(--text);margin:22px 0;overflow-x:auto;text-align:center}mjx-container[jax="SVG"]{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:4px 0}.pending{max-width:var(--text);padding:13px 0;margin:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:13px/1.5 Arial,Helvetica,sans-serif;color:#55544f}.figure{width:100%;max-width:100%;margin:32px 0 46px}.figure-frame{width:100%;overflow:visible;padding:0}.plotly-shell{position:relative;width:100%;max-width:100%;min-width:0}
+.figure-fallback{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:100%;object-fit:contain}
+.plotly-graph-div{position:absolute!important;inset:0;width:100%!important;height:100%!important;max-width:100%;min-width:0;opacity:0;transition:opacity .12s ease}
+.plotly-graph-div.plotly-ready{opacity:1}
+.figure figcaption{max-width:100%;margin-top:12px;font-size:13px;line-height:1.45}.table-block{margin:31px 0 48px;width:100%;max-width:100%}.table-title{max-width:100%;margin-bottom:8px;font-size:14px;line-height:1.4}.table-wrap{width:100%;max-width:100%;overflow-x:auto;border-top:1.5px solid var(--line-strong);border-bottom:1.5px solid var(--line-strong)}.scientific-table{width:100%;border-collapse:collapse;table-layout:auto;font:13px/1.35 Arial,Helvetica,sans-serif}.scientific-table thead th{padding:9px 9px 8px;border-bottom:1px solid var(--line-strong);color:#4d4c22;font-size:11px;text-transform:uppercase;letter-spacing:.035em;text-align:left;vertical-align:bottom;white-space:normal}.scientific-table tbody td{padding:9px;border-bottom:1px solid #e8e7e1;vertical-align:top;overflow-wrap:anywhere}.scientific-table tbody tr:last-child td{border-bottom:none}.side-group{padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid var(--line)}.side-group:last-child{border-bottom:none}.side-title{margin-bottom:8px;color:var(--accent);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.sidebar-pane a{display:block;padding:4px 0;color:#464642;text-decoration:none;font-size:12.5px;line-height:1.35}.sidebar-pane a:hover,.sidebar-pane a.active{font-weight:700;color:#111}.references{max-width:100%;padding-left:22px;font-size:14px}.references li{margin-bottom:11px}.references a{word-break:break-word}@media(max-width:1030px){body{overflow:auto}.workspace{display:block;height:auto;width:min(920px,calc(100% - 40px))}.scrollpane{overflow:visible}.sidebar-pane{display:none}.article-pane{padding-top:34px}.context-scrollbar{display:none}.site-header-inner{padding:0 20px}.topnav{gap:0}.topnav>a,.topnav>.menu>button{padding:10px 7px}}@media(max-width:700px){.identity .date{display:none}.topnav .menu{display:none}.byline{grid-template-columns:1fr}.meta{text-align:left}h1{font-size:43px}.subtitle{font-size:19px}.plotly-shell{min-height:340px;aspect-ratio:auto!important}.figure{margin:28px 0 42px}}@media print{body{overflow:visible}.site-header,.sidebar-pane,.context-scrollbar{display:none!important}.workspace,.article-pane{display:block;height:auto;overflow:visible;width:100%;margin:0;padding:0}.article{width:100%}.figure,.table-block{break-inside:avoid}@page{size:A4;margin:18mm 16mm 18mm 18mm}}
+.scientific-verdict{margin:1.25rem 0;padding:.9rem 1rem;border-left:3px solid var(--olive,#65641e);background:#f7f6f1;line-height:1.55}.scientific-verdict.wine{border-left-color:#743348}.scientific-verdict.olive{border-left-color:#65641e}
+/* Extensión PAPIRO para maqueta genérica, manteniendo sus reglas editoriales. */
+:root{--paper:#fff;--olive:#65641e;--olive-dark:#4e4e17;--paper-muted:#f8f8f5;--accent:#65641e}
+.skip-link{position:fixed;top:-80px;left:18px;z-index:500;background:#fff;border:2px solid var(--accent);padding:8px 16px;font:14px Arial}
+.skip-link:focus{top:10px}
+.report-kicker{letter-spacing:.14em}
+.identity-topic{font-size:13px}
+.mobile-index-toggle{display:none}
+.topnav>a{font-family:Arial,Helvetica,sans-serif;font-size:12px}
+.topnav .active{color:var(--olive-dark);border-bottom:2px solid var(--olive)}
+.demo-notice{max-width:100%;font:13px/1.6 Arial,Helvetica,sans-serif;background:#f6f6f0;color:#464631;padding:12px 16px;border-left:3px solid var(--olive);margin:22px 0 24px!important;text-align:left!important}
+.section{scroll-margin-top:24px}
+.section h2{font-size:30px}
+.section h3{border-top:none!important}
+.section .eyebrow{font:700 11px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--olive);margin-top:26px}
+.section p:not(.table-footnote){max-width:100%}
+.scientific-note{padding:11px 0 11px 16px;border-left:2px solid #a3a17f;font-size:14px!important;color:#59584c;line-height:1.65!important}
+.technical-inline{font-family:Arial,Helvetica,sans-serif;font-size:.9em;color:#55523b}
+.figure{width:100%;max-width:100%;margin:31px 0 46px}
+.figure-kicker{font:700 10px Arial,Helvetica,sans-serif;letter-spacing:.14em;color:var(--olive);margin-bottom:4px}
+.figure-frame{border:0;padding:0 0 6px 0;overflow:visible;min-width:0}
+.plotly-shell{height:410px;min-height:410px;position:relative;max-width:100%;width:100%}
+.plotly-graph-div{position:absolute!important;inset:0!important;height:100%!important;width:100%!important;opacity:0;min-height:0!important;transition:opacity .25s}
+.plotly-graph-div.plotly-ready{opacity:1}
+.chart-loading{height:100%;min-height:390px;display:flex;align-items:center;justify-content:center;font:13px Arial;color:#777;border:1px dashed #bbb}
+.figure-bottom{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-top:8px}
+.figure figcaption{flex:1;max-width:100%;margin:0;font:13px/1.6 Georgia,"Times New Roman",serif;color:#4b4b43}
+.chart-reset{flex-shrink:0;white-space:nowrap;background:transparent;border:1px solid #d7d7cc;color:#58583e;cursor:pointer;font:11px Arial;padding:7px 9px}
+.chart-reset:hover,.chart-reset:focus-visible,.chart-reset.just-reset{border-color:var(--olive);background:#f5f5ee;color:#24240a}
+.table-footnote{font-size:12px!important;color:#67675f;text-align:left!important;margin:10px 0 0!important;font-family:Arial,Helvetica,sans-serif}
+.table-title{font-family:Georgia,"Times New Roman",serif;font-size:15px}
+.scientific-table tbody tr:hover td{background:#f7f7f3}
+.article-footer{font:12px/1.6 Arial,Helvetica,sans-serif;color:#68665a;border-top:1px solid #d8d7d0;padding-top:22px;margin:42px 0}
+.section blockquote{font-style:italic}
+.equation{font-size:21px;overflow:auto;padding:10px 0 14px}
+.section a{color:#565a24;text-decoration-thickness:1px;text-underline-offset:3px}
+.section a:hover{color:#2d3112}
+:focus-visible{outline:2px solid var(--olive);outline-offset:3px}
+#sidebar-scroll a{transition:color .13s ease,padding-left .13s ease}
+#sidebar-scroll a:hover{padding-left:4px}
+#sidebar-scroll a.active{color:var(--olive-dark);border-left:2px solid var(--olive);margin-left:-8px;padding-left:6px}
+@media(max-width:1030px){
+  .site-header{position:sticky;top:0;z-index:80}
+  .workspace{width:min(920px,calc(100% - 42px))}
+  .scrollpane{overflow:visible}
+  .article-pane{padding:30px 0 80px}
+  .sidebar-pane{display:none;position:fixed;z-index:85;top:var(--header-h);right:0;bottom:0;overflow:auto!important;width:min(340px,94vw);background:#fff;border:1px solid var(--line);padding:25px;box-shadow:-12px 0 32px rgba(0,0,0,.08)}
+  .sidebar-pane.mobile-open{display:block}
+  .mobile-index-toggle{display:inline-flex;align-items:center;gap:5px;cursor:pointer;color:var(--olive);border:1px solid #d2d2c8;background:#fff;padding:7px 10px;font:12px Arial}
+  .section{scroll-margin-top:90px}
+}
+@media(max-width:700px){
+  .identity-topic,.identity .dot:nth-of-type(2){display:none}
+  .topnav a[href="#figure-1"],.topnav a[href="#table-1"],.topnav a[href="#metodologia"]{display:none}
+  .site-header-inner{padding:0 14px;gap:7px}
+  .workspace{width:calc(100% - 32px)}
+  .plotly-shell{height:380px;min-height:380px}
+  .chart-loading{min-height:360px}
+  .figure-bottom{flex-wrap:wrap}
+  .chart-reset{margin-left:auto}
+  .section p{font-size:16px}
+}
+@media print{.chart-reset,.demo-notice{display:none!important}.plotly-graph-div{position:relative!important;opacity:1!important}.chart-loading{display:none!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{transition-duration:0s!important;animation-duration:0s!important}}
+
+/* PAPIRO v0.1.0 — Contrato de figuras: flujos independientes, alturas
+   coherentes con Plotly, ejes visibles y cero superposición figura/caption. */
+.figure {
+  display: flow-root;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 38px 0 56px;
+  clear: both;
+  min-width: 0;
+  isolation: isolate;
+}
+.figure-frame {
+  width: 100%; max-width: 100%; min-width: 0;
+  padding: 0; margin: 0; overflow: visible;
+}
+.plotly-shell {
+  position: relative;
+  width: 100%; max-width: 100%; min-width: 0;
+  min-height: 0;
+  height: min(var(--figure-height, 430px), max(345px, calc(100dvh - var(--header-h) - 66px)));
+  overflow: hidden;
+}
+.figure-multipanel .plotly-shell {
+  /* Tres paneles: reducir según pantalla sin eliminar los detalles científicos. */
+  height: clamp(565px, calc(100dvh - var(--header-h) - 66px), 700px);
+}
+.plotly-graph-div {
+  display: block;
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-width: 100% !important;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.plotly-graph-div.plotly-ready { opacity: 1; }
+.chart-loading {
+  position: absolute; inset: 0; z-index: 1;
+  height: 100%; min-height: 0;
+}
+.figure-bottom {
+  position: relative; clear: both;
+  display: flex; gap: 18px; align-items: flex-start;
+  justify-content: space-between;
+  width: 100%; max-width: 100%; min-width: 0;
+  margin: 14px 0 0;
+  padding: 0;
+}
+.figure figcaption {
+  display: block; flex: 1 1 auto; min-width: 0;
+  margin: 0; max-width: 100%;
+  overflow-wrap: break-word;
+  white-space: normal;
+  font: 13px/1.65 Georgia, "Times New Roman", serif;
+  color: #4b4b43;
+}
+.chart-reset { align-self: flex-start; flex: 0 0 auto; }
+@media(max-width:1030px) {
+  .figure {margin: 32px 0 52px;}
+}
+@media(max-width:700px) {
+  .plotly-shell {
+    height: min(var(--figure-height, 430px), max(335px, calc(100dvh - var(--header-h) - 36px)));
+    min-height: 0;
+  }
+  .figure-multipanel .plotly-shell {
+    height: clamp(590px, calc(100dvh - var(--header-h) - 42px), 700px);
+  }
+  .figure-bottom {flex-direction: column; gap: 12px;}
+  .chart-reset {align-self: flex-end; margin: 0;}
+  .figure figcaption {font-size: 12.5px;}
+}
+@media print {
+  .plotly-shell {height: var(--figure-height, 430px) !important;overflow: visible;}
+  .plotly-graph-div {position:relative!important;opacity:1!important;}
+}
+
+/* v0.1.0 (final) | La figura 06 conserva su número y ocupa una caja propia.
+   En dispositivos pequeños permitimos mayor detalle sin invadir el siguiente
+   elemento; los captions siempre pertenecen al flujo del documento. */
+.figure-multipanel .plotly-shell {
+  height: min(700px, max(410px, calc(100dvh - var(--header-h) - 70px)));
+}
+@media (max-width:700px) {
+  .figure-multipanel .plotly-shell {
+    height: min(630px, max(395px, calc(100dvh - var(--header-h) - 60px)));
+  }
+}
+
+/* v0.2.0 · Ejes completos, gráficos responsive y captions en flujo normal.
+   Sin bordes/separadores añadidos. Los contenedores tienen altura explícita
+   y Plotly obtiene esa altura por JS, evitando superposiciones. */
+.figure{display:flow-root;position:relative;isolation:isolate;overflow:visible;clear:both;min-width:0;}
+.figure-frame,.plotly-shell{box-sizing:border-box;max-width:100%;min-width:0;}
+.figure-frame{display:block;position:relative;overflow:visible;}
+.plotly-shell{min-height:0!important;height:clamp(340px,calc(100dvh - var(--header-h,90px) - 205px),480px);overflow:hidden;}
+.figure-multipanel .plotly-shell{height:clamp(430px,calc(100dvh - var(--header-h,90px) - 180px),650px);}
+.figure .plotly-graph-div{position:relative!important;inset:auto!important;height:100%!important;min-height:0!important;max-height:100%!important;width:100%!important;}
+.figure .figure-bottom{position:relative;display:flex;flex-wrap:wrap;clear:both;align-items:flex-start;justify-content:space-between;gap:12px 18px;margin:14px 0 0;}
+.figure figcaption{position:relative;flex:1 1 420px;min-width:0;overflow-wrap:anywhere;}
+.figure .chart-reset{align-self:flex-start;}
+@media(max-width:700px){
+  .plotly-shell{height:clamp(335px,calc(100dvh - var(--header-h,70px) - 150px),440px);}
+  .figure-multipanel .plotly-shell{height:clamp(430px,calc(100dvh - var(--header-h,70px) - 165px),600px);}
+  .figure .figure-bottom{display:flex;flex-direction:column;gap:10px;}
+  .figure .chart-reset{align-self:flex-end;}
+}
